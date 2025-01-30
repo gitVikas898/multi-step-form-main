@@ -1,0 +1,20 @@
+[
+    {
+        "id" : "1",
+        "type" : "Arcade",
+        "value" : 9,
+        "img_url": "/public/images/icon-arcade.svg"
+    },
+    {
+        "id" : "2",
+        "type" : "Advance",
+        "value" : 12,
+        "img_url": "/public/images/icon-advanced.svg"
+    },
+    {
+        "id" : "3",
+        "type" : "Pro",
+        "value" : 15,
+        "img_url": "/public/images/icon-pro.svg"
+    }
+]
