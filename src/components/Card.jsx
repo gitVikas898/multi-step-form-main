@@ -1,9 +1,7 @@
-const Card = ({card}) => {
+const Card = ({card , isSelected,onSelect}) => {
   return (
     <div
-      id="card"
-      className="grid gap-4 p-4 border border-Purplish-blue rounded-lg"
-    >
+      id="card" className={`p-4 border-2 rounded-lg cursor-pointer transition-all ${isSelected ? "border-blue-500 bg-blue-100" : "border-gray-300"}`}onClick={()=>onSelect(card)}>
       <div>
         <img src={card.img_url} alt="" />
       </div>
