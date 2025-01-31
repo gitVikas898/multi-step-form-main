@@ -4,8 +4,7 @@ import Page from './pages/Page'
 function App() {
   return (
     <>
-      <h1>This is New Project </h1>
-      <section className='grid place-items-center min-h-screen'>
+      <section className='grid place-items-center min-h-screen mx-auto'>
         <div className=''>
             <Page/>
         </div>

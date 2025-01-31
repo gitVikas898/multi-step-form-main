@@ -1,7 +1,7 @@
-const Info = () => {
+const Info = ({next}) => {
   return (
     <div>
-      <form action="" className="grid gap-4">
+      <form action="" className="grid gap-4 p-4">
         <div className="grid gap-4">
           <h1 className="text-4xl text-Marine-blue font-bold">Personal info</h1>
           <p className="text-xl text-Cool-gray">Please provide your name, email address, and phone number.</p>
@@ -31,7 +31,7 @@ const Info = () => {
           <input type="text" name="phone" className="flex-1 border text-Marine-blue border-Light-gray p-2 outline-none rounded-lg" />
         </div>
         <div className="flex items-end justify-end">
-            <button className="bg-Marine-blue text-white px-5 py-3 rounded-lg">
+            <button className="bg-Marine-blue text-white px-5 py-3 rounded-lg" onClick={next}>
                 Next Step
             </button>
         </div>
