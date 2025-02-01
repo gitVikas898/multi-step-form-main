@@ -1,20 +1,24 @@
-import { useState } from "react";
+import { usePlan } from "../utils/PlanContext";
 
 const ToggleSwitch = () => {
-  const [isOn, setIsOn] = useState(false); // State to track the toggle status
+
+  const {isDuration,setDuration} = usePlan();// State to track the toggle status
 
   const handleToggle = () => {
-    setIsOn((prevState) => !prevState); // Toggle the state between true/false
+    setDuration((prevState) => prevState === "Monthly" ? "Yearly" : "Monthly"); 
+   // Toggle the state between true/false
   };
 
   return (
-    <div>
+    <div className="flex gap-4">
+      <p className={isDuration === "Monthly" ? "text-Marine-blue" : "text-Cool-gray"}>Monthly</p>
       <label className="flex items-center cursor-pointer">
-        <span className="mr-4">{isOn ? "Monthly" : "Early"}</span>
-        <div className={`relative inline-block w-12 h-6 rounded-full transition-all ${isOn ? "bg-blue-500" : "bg-gray-300"}`}onClick={handleToggle}>
-          <div className={`absolute top-0 left-0 w-6 h-6 rounded-full bg-white transition-transform ${isOn ? "transform translate-x-6" : ""}`}></div>
+       
+        <div className={`relative inline-block w-12 h-6 rounded-full transition-all  ${isDuration ? "bg-Marine-blue" : "bg-Marine-blue"}`}onClick={handleToggle}>
+            <div className={`absolute top-1.5 left-1 w-3 h-3 rounded-full bg-white transition-transform ${isDuration === "Yearly" ? "transform translate-x-6" : ""}`}></div>
         </div>
       </label>
+        <p className={isDuration === "Yearly" ? "text-Marine-blue" : "text-Cool-gray "}>Yearly</p>
     </div>
   );
 };

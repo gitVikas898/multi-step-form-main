@@ -2,10 +2,11 @@ import Card from "./Card";
 import ToggleSwitch from "./Toggle";
 import cards from "../utils/cards.json"
 import { useEffect, useRef, useState } from "react";
+import { usePlan } from "../utils/PlanContext";
 const Plan = ({next,prev}) => {
 
   const formRef = useRef(null);
-  const  [selectedPlan, setselectedPlan] = useState(null);
+  const { selectedPlan, setselectedPlan } = usePlan(); 
 
   const handleSelected = (plan)=>{
       setselectedPlan(plan);

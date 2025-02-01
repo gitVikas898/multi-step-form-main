@@ -1,12 +1,15 @@
 import './App.css'
 import Page from './pages/Page'
+import { PlanProvider } from './utils/PlanContext'
 
 function App() {
   return (
     <>
       <section className='grid place-items-center min-h-screen mx-auto'>
         <div className=''>
-            <Page/>
+            <PlanProvider>
+              <Page/>
+            </PlanProvider>
         </div>
       </section>
     </>
