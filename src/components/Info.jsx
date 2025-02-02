@@ -26,7 +26,7 @@ const Info = ({next}) => {
 
 
   return (
-    <div>
+    <div className="">
       <form action="" onSubmit={(e)=>e.preventDefault()}  className="grid gap-4 p-4">
         <div className="grid gap-4">
           <h1 className="text-4xl text-Marine-blue font-bold">Personal info</h1>

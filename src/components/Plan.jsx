@@ -34,9 +34,9 @@ const Plan = ({next,prev}) => {
 
 
   return (
-    <div>
-      <form action="" onSubmit={(e)=>e.preventDefault()} className="flex flex-col gap-4 p-4" ref={formRef}>
-        <div className="grid gap-2">
+    <div className="p-4 max-w-[40rem]">
+      <form action="" onSubmit={(e)=>e.preventDefault()} className="flex flex-col gap-8 p-4" ref={formRef}>
+        <div className="grid gap-4">
           <h1 className="text-4xl text-Marine-blue font-bold">Select your plan</h1>
           <p className="text-xl text-Cool-gray">You have the option of monthly or yearly billing.</p>
         </div>
